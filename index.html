@@ -19,6 +19,10 @@
             color: #333;
             white-space: nowrap;
             outline: none;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            text-align: center;
         }
     </style>
 </head>
@@ -60,7 +64,7 @@
             while (low < high) {
                 var mid = Math.floor((low + high) / 2);
                 e.style.fontSize = mid + 'px';
-                if (e.scrollWidth <= e.clientWidth /*&& e.scrollHeight <= e.clientHeight*/) {
+                if (e.scrollWidth <= e.clientWidth && e.scrollHeight <= e.clientHeight) {
                     low = mid + 1;
                 } else {
                     high = mid;
